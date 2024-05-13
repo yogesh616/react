@@ -1,6 +1,6 @@
  import { useEffect } from 'react';
 import { auth, provider, db } from './firebase.js';
-import { onAuthStateChanged, signInWithRedirect } from 'firebase/auth'
+import { onAuthStateChanged, signInWithPopup } from 'firebase/auth'
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 import './App.css';
@@ -33,7 +33,7 @@ function App() {
 
   const signIn = async () => {
     try {
-      await signInWithRedirect(auth, provider);
+      await signInWithPopup(auth, provider);
       console.log('Redirecting to sign-in page...');
     } catch (error) {
       console.log('Error during sign-in:', error);
