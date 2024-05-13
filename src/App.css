@@ -1,0 +1,18 @@
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.photoURL {
+  width: 60px;
+  height: 65px;
+  border-radius: 50%;
+}
+.border-0 {
+   background: transparent;
+}
+.border-0 i {
+  font-size: 30px ;
+}
